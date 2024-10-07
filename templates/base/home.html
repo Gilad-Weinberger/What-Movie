@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Movie | Home</title>
+    <meta http-equiv="refresh" content="6" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/base/home.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-462758aa1e172f82d39e1ea35e919e0a.css?vsn=d"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+    />
+  </head>
+  <body>
+    {% include 'components/navbar.html' %}
+    <div class="home">
+      <div class="search">
+        <h1 class="title">Discover Your Next Favorite Movie</h1>
+        <div class="search-bar">
+          <input
+            type="search"
+            name=""
+            class="search-input"
+            id=""
+            placeholder="Search Your Favorite Movie..."
+          />
+          <button type="submit">
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="movie-gallery">
+        {% for movie in movies %}
+        <div class="movie-card">
+          <img
+            src="{{ movie.image }}"
+            alt="{{ movie.name }}"
+            class="movie-image"
+          />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

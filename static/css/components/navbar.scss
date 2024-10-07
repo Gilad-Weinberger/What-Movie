@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Rubik+Spray+Paint&display=swap");
+
+.navbar {
+  font-family: "Poppins";
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.0000001));
+  color: white;
+  height: 50px; /* Increase the height to accommodate bigger elements */
+  left: 0px;
+  top: 0px;
+  padding: 16px 30px 0px 38px;
+  position: absolute;
+  width: calc(100vw - 84px);
+  z-index: 12;
+  .left {
+    display: flex;
+    align-items: center;
+    .logo-link {
+      display: flex;
+      align-items: center;
+      .logo {
+        height: 35px; /* Increase the logo height to match the navbar height */
+        margin-right: 15px;
+      }
+    }
+    p {
+      font-size: 16px; /* Increase the font size for the left section */
+      margin-left: 15px;
+    }
+    .categories {
+      display: flex;
+      align-items: center;
+      margin: 0px 15px;
+      font-size: 14px; /* Increase the font size for categories */
+      i {
+        font-size: 20px; /* Increase the font size for the icon */
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .bell {
+      display: flex;
+      .bell-box {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($color: #333232, $alpha: 0.85);
+        border-radius: 50%;
+        i {
+          font-size: 20px; /* Increase the font size for the bell icon */
+        }
+      }
+      .bell-count-box {
+        background-color: rgb(200, 158, 22);
+        height: 25px; /* Increase the height to match the bell count box size */
+        width: 25px; /* Increase the width to match the bell count box size */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-left: -12.5px; /* Adjust the margin to center the bell count box */
+        .bell-count {
+          font-size: 14px; /* Increase the font size for the bell count */
+        }
+      }
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      .image {
+        height: 50px; /* Increase the image height to match the navbar height */
+        width: 50px; /* Increase the image width to match the navbar height */
+        border-radius: 50%;
+      }
+      .text {
+        margin-left: 10px;
+        .welcome {
+          font-size: 14px; /* Increase the font size for the welcome text */
+          margin: 0px;
+          color: #dfdfdf;
+        }
+        .name {
+          font-size: 16px; /* Increase the font size for the name text */
+          margin: 0px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

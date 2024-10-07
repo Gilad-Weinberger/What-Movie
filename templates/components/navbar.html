@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/components/navbar.css' %}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <a href="{% url 'home' %}" class="logo-link">
+          <img
+            src="{% static 'images/logo.png' %}"
+            alt="Groovy Movie"
+            class="logo"
+          />
+        </a>
+        <p class="categories">
+          <i class="fa-solid fa-grid-2"></i>
+          Categories
+        </p>
+        <p class="online-cinema">Online Cinema</p>
+        <p class="celcebs">Celebs</p>
+        <p class="commuinty">Community</p>
+      </div>
+      <div class="right">
+        <div class="bell">
+          <div class="bell-box">
+            <i class="fa-light fa-bell"></i>
+          </div>
+          <div class="bell-count-box">
+            <p class="bell-count">0</p>
+          </div>
+        </div>
+        <div class="profile">
+          <img
+            src="{% static 'images/profile-image.jpg' %}"
+            alt=""
+            class="image"
+          />
+          <div class="text">
+            <p class="welcome">Hi, welcome</p>
+            <p class="name">Gilad Weinberger</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

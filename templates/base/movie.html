@@ -1,0 +1,125 @@
+{% load static %} {% load custom_filters %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What Movie | {{ movie.name }}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/base/movie.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-9a55d8748fd46de7b7977d9ee8dee7a4.css?vsn=d"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <div class="main-screen">
+        <div class="video-container">
+          <img src="{{ movie.image }}" class="video-trailer" />
+        </div>
+        {% include 'components/navbar.html' %}
+        <div class="main-movie">
+          <div class="titles">
+            <!-- style="font-family: {{ mainMovie.fontFamily }}" -->
+            <h1 class="title">{{ movie.name }}</h1>
+            {% if mainMovie.ageLimit %}
+            <div class="age-limit-box">
+              <p class="age-limit">{{ mainMovie.ageLimit }}</p>
+            </div>
+            {% endif %}
+          </div>
+          <p class="description">{{ movie.description }}</p>
+          <div class="actors">
+            {% for character in movie.top_characters %}
+            <div class="actor">
+              <a href="">
+                <img
+                  src="{{ character.image }}"
+                  class="image"
+                  alt="{{ character.actor_name }}"
+                />
+              </a>
+              <p class="name">{{ character.actor_name|get_first_name }}</p>
+            </div>
+            {% endfor %}
+            <div class="actor">
+              <div class="plus-box">
+                <p class="plus">+</p>
+              </div>
+              <p class="name more">more</p>
+            </div>
+          </div>
+          <div class="details">
+            <div class="rating">
+              <h1 class="actual">{{ movie.rating }}</h1>
+              <p class="out-of-ten">/ 10</p>
+            </div>
+            <p class="length">
+              <i class="fa-sharp fa-regular fa-clock"></i>
+              {{ movie.duration.hours }}h {{ movie.duration.minutes }}m
+            </p>
+            <p class="year">
+              <i class="fa-light fa-calendar-days"></i>
+              {{ movie.year_released }}
+            </p>
+          </div>
+          <div class="categories">
+            {% for genre in movie.genres %}
+            <p class="category">{{ genre }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% if mainSeries %}
+      <div class="main-series">
+        <h1 class="title">{{ mainSeries.name }} Series Movies</h1>
+        <div class="movies">
+          {% for movie in mainSeries.series_movies %}
+          <div class="movie">
+            <video
+              class="trailer"
+              src="{{ movie.trailerVideo.url }}"
+              loop
+              preload="auto"
+            ></video>
+            <div class="movie-info show-info">
+              <p class="name">jj</p>
+              <div class="rating">
+                <h1 class="actual">{{ movie.rating }}</h1>
+                <p class="out-of-ten">/ 10</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
