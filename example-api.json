@@ -1,0 +1,487 @@
+{
+  "data": {
+    "mainSearch": {
+      "edges": [
+        {
+          "node": {
+            "entity": {
+              "__typename": "Title",
+              "id": "tt11315808",
+              "titleText": {
+                "text": "Joker: Folie à Deux",
+                "isOriginalTitle": true
+              },
+              "originalTitleText": {
+                "text": "Joker: Folie à Deux",
+                "isOriginalTitle": true
+              },
+              "releaseYear": {
+                "__typename": "YearRange",
+                "year": 2024,
+                "endYear": null
+              },
+              "releaseDate": {
+                "__typename": "ReleaseDate",
+                "month": 10,
+                "day": 4,
+                "year": 2024,
+                "country": { "id": "US" },
+                "restriction": null,
+                "attributes": [],
+                "displayableProperty": { "qualifiersInMarkdownList": null }
+              },
+              "titleType": {
+                "__typename": "TitleType",
+                "id": "movie",
+                "text": "Movie",
+                "categories": [
+                  { "id": "movie", "text": "Movie", "value": "movie" }
+                ],
+                "canHaveEpisodes": false,
+                "isEpisode": false,
+                "isSeries": false,
+                "displayableProperty": { "value": { "plainText": "" } }
+              },
+              "primaryImage": {
+                "__typename": "Image",
+                "id": "rm1262510593",
+                "url": "https://m.media-amazon.com/images/M/MV5BZTE0M2Q0ODgtY2U2My00YThlLWI1ZjUtNzBkMmU4NTQ2YzVlXkEyXkFqcGc@._V1_.jpg",
+                "height": 3000,
+                "width": 2000
+              },
+              "episodes": null,
+              "series": null,
+              "principalCredits": [
+                {
+                  "credits": [
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0001618",
+                        "nameText": { "text": "Joaquin Phoenix" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm521242113",
+                          "url": "https://m.media-amazon.com/images/M/MV5BYjFjNGYzYjEtNGE0Ny00M2IyLTk5ZmYtODE3ZGFkMzVjYmNmXkEyXkFqcGc@._V1_.jpg",
+                          "height": 320,
+                          "width": 214
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm3078932",
+                        "nameText": { "text": "Lady Gaga" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm3570199552",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMTg1NjQwMzU4MF5BMl5BanBnXkFtZTgwNTk5NjQ4NjE@._V1_.jpg",
+                          "height": 2048,
+                          "width": 1359
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0322407",
+                        "nameText": { "text": "Brendan Gleeson" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm15839488",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMTA3NTMxODI0OTBeQTJeQWpwZ15BbWU3MDQ1NTY5Mjc@._V1_.jpg",
+                          "height": 2048,
+                          "width": 1362
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "entity": {
+              "__typename": "Title",
+              "id": "tt7286456",
+              "titleText": { "text": "Joker", "isOriginalTitle": true },
+              "originalTitleText": { "text": "Joker", "isOriginalTitle": true },
+              "releaseYear": {
+                "__typename": "YearRange",
+                "year": 2019,
+                "endYear": null
+              },
+              "releaseDate": {
+                "__typename": "ReleaseDate",
+                "month": 10,
+                "day": 4,
+                "year": 2019,
+                "country": { "id": "US" },
+                "restriction": null,
+                "attributes": [],
+                "displayableProperty": { "qualifiersInMarkdownList": null }
+              },
+              "titleType": {
+                "__typename": "TitleType",
+                "id": "movie",
+                "text": "Movie",
+                "categories": [
+                  { "id": "movie", "text": "Movie", "value": "movie" }
+                ],
+                "canHaveEpisodes": false,
+                "isEpisode": false,
+                "isSeries": false,
+                "displayableProperty": { "value": { "plainText": "" } }
+              },
+              "primaryImage": {
+                "__typename": "Image",
+                "id": "rm3353122305",
+                "url": "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_.jpg",
+                "height": 4096,
+                "width": 2764
+              },
+              "episodes": null,
+              "series": null,
+              "principalCredits": [
+                {
+                  "credits": [
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0001618",
+                        "nameText": { "text": "Joaquin Phoenix" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm521242113",
+                          "url": "https://m.media-amazon.com/images/M/MV5BYjFjNGYzYjEtNGE0Ny00M2IyLTk5ZmYtODE3ZGFkMzVjYmNmXkEyXkFqcGc@._V1_.jpg",
+                          "height": 320,
+                          "width": 214
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0000134",
+                        "nameText": { "text": "Robert De Niro" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm418418432",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_.jpg",
+                          "height": 400,
+                          "width": 303
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm5939164",
+                        "nameText": { "text": "Zazie Beetz" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm818661633",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMGYwMTVlZmEtMWU3OC00NDViLWE4YmQtNDFiYjQ0MzZmNGExXkEyXkFqcGc@._V1_.jpg",
+                          "height": 664,
+                          "width": 600
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "entity": {
+              "__typename": "Title",
+              "id": "tt1918886",
+              "titleText": { "text": "Joker", "isOriginalTitle": true },
+              "originalTitleText": { "text": "Joker", "isOriginalTitle": true },
+              "releaseYear": {
+                "__typename": "YearRange",
+                "year": 2012,
+                "endYear": null
+              },
+              "releaseDate": {
+                "__typename": "ReleaseDate",
+                "month": 8,
+                "day": 31,
+                "year": 2012,
+                "country": { "id": "IN" },
+                "restriction": null,
+                "attributes": [],
+                "displayableProperty": { "qualifiersInMarkdownList": null }
+              },
+              "titleType": {
+                "__typename": "TitleType",
+                "id": "movie",
+                "text": "Movie",
+                "categories": [
+                  { "id": "movie", "text": "Movie", "value": "movie" }
+                ],
+                "canHaveEpisodes": false,
+                "isEpisode": false,
+                "isSeries": false,
+                "displayableProperty": { "value": { "plainText": "" } }
+              },
+              "primaryImage": {
+                "__typename": "Image",
+                "id": "rm1698999040",
+                "url": "https://m.media-amazon.com/images/M/MV5BMjE0NjIxODMxN15BMl5BanBnXkFtZTcwMjM5MDcxOA@@._V1_.jpg",
+                "height": 1119,
+                "width": 838
+              },
+              "episodes": null,
+              "series": null,
+              "principalCredits": [
+                {
+                  "credits": [
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0474774",
+                        "nameText": { "text": "Akshay Kumar" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm2126386432",
+                          "url": "https://m.media-amazon.com/images/M/MV5BODI4NDY1NzkyM15BMl5BanBnXkFtZTgwNzM3MDM0OTE@._V1_.jpg",
+                          "height": 2048,
+                          "width": 1630
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm3848064",
+                        "nameText": { "text": "Sonakshi Sinha" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm54013185",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMDFiNWEzYmYtYzBkNS00NDRjLTg4ZGUtMGY0ZjdhZWVkNmMxXkEyXkFqcGc@._V1_.jpg",
+                          "height": 1600,
+                          "width": 1280
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm1662277",
+                        "nameText": { "text": "Shreyas Talpade" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm2104559616",
+                          "url": "https://m.media-amazon.com/images/M/MV5BM2NiY2RkZDAtNmQ1MC00YzhkLWJlYjctNTBhNjEyNjM0ZmZjXkEyXkFqcGc@._V1_.jpg",
+                          "height": 2010,
+                          "width": 1575
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "entity": {
+              "__typename": "Title",
+              "id": "tt2548208",
+              "titleText": { "text": "Poker Night", "isOriginalTitle": true },
+              "originalTitleText": {
+                "text": "Poker Night",
+                "isOriginalTitle": true
+              },
+              "releaseYear": {
+                "__typename": "YearRange",
+                "year": 2014,
+                "endYear": null
+              },
+              "releaseDate": {
+                "__typename": "ReleaseDate",
+                "month": 11,
+                "day": 20,
+                "year": 2014,
+                "country": { "id": "KW" },
+                "restriction": null,
+                "attributes": [],
+                "displayableProperty": { "qualifiersInMarkdownList": null }
+              },
+              "titleType": {
+                "__typename": "TitleType",
+                "id": "movie",
+                "text": "Movie",
+                "categories": [
+                  { "id": "movie", "text": "Movie", "value": "movie" }
+                ],
+                "canHaveEpisodes": false,
+                "isEpisode": false,
+                "isSeries": false,
+                "displayableProperty": { "value": { "plainText": "" } }
+              },
+              "primaryImage": {
+                "__typename": "Image",
+                "id": "rm1798688768",
+                "url": "https://m.media-amazon.com/images/M/MV5BOTc5NjIyODM2M15BMl5BanBnXkFtZTgwMTMyNzE4MDE@._V1_.jpg",
+                "height": 1111,
+                "width": 750
+              },
+              "episodes": null,
+              "series": null,
+              "principalCredits": [
+                {
+                  "credits": [
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm2155525",
+                        "nameText": { "text": "Beau Mirchoff" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm3082248192",
+                          "url": "https://m.media-amazon.com/images/M/MV5BM2U4ZmIzOTQtZThhMS00OGMyLWJkMDAtZWJhZjhkOWI3ZDIwXkEyXkFqcGc@._V1_CR70,0,250,375_.jpg",
+                          "height": 375,
+                          "width": 250
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0000579",
+                        "nameText": { "text": "Ron Perlman" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm2625617664",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMTY0NzAzMTEyOV5BMl5BanBnXkFtZTcwNjYwMzYwNg@@._V1_.jpg",
+                          "height": 2048,
+                          "width": 1414
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm0002064",
+                        "nameText": { "text": "Giancarlo Esposito" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm3255274240",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMjEyODM1NjI0OF5BMl5BanBnXkFtZTcwMTE0OTA1Mg@@._V1_.jpg",
+                          "height": 400,
+                          "width": 281
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "entity": {
+              "__typename": "Title",
+              "id": "tt5611648",
+              "titleText": { "text": "Joker", "isOriginalTitle": true },
+              "originalTitleText": { "text": "Joker", "isOriginalTitle": true },
+              "releaseYear": {
+                "__typename": "YearRange",
+                "year": 2016,
+                "endYear": null
+              },
+              "releaseDate": {
+                "__typename": "ReleaseDate",
+                "month": 8,
+                "day": 12,
+                "year": 2016,
+                "country": { "id": "IN" },
+                "restriction": null,
+                "attributes": [],
+                "displayableProperty": { "qualifiersInMarkdownList": null }
+              },
+              "titleType": {
+                "__typename": "TitleType",
+                "id": "movie",
+                "text": "Movie",
+                "categories": [
+                  { "id": "movie", "text": "Movie", "value": "movie" }
+                ],
+                "canHaveEpisodes": false,
+                "isEpisode": false,
+                "isSeries": false,
+                "displayableProperty": { "value": { "plainText": "" } }
+              },
+              "primaryImage": {
+                "__typename": "Image",
+                "id": "rm562117120",
+                "url": "https://m.media-amazon.com/images/M/MV5BMTg3NzU5Mzg1MF5BMl5BanBnXkFtZTgwODIxMDg4MDI@._V1_.jpg",
+                "height": 662,
+                "width": 484
+              },
+              "episodes": null,
+              "series": null,
+              "principalCredits": [
+                {
+                  "credits": [
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm5626435",
+                        "nameText": { "text": "Guru Somasundaram" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm1946419712",
+                          "url": "https://m.media-amazon.com/images/M/MV5BNWYxMzAxZGEtMWI4ZC00M2I2LWFlMTEtZTQxOGY3ODlkYTViXkEyXkFqcGc@._V1_.jpg",
+                          "height": 789,
+                          "width": 611
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm8051850",
+                        "nameText": { "text": "Ramya Pandian" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm2910398720",
+                          "url": "https://m.media-amazon.com/images/M/MV5BMzM3ZDRlMWUtNjhkNi00YTI5LWI0ZGEtM2I3ZDkwMTZkYTEwXkEyXkFqcGc@._V1_.jpg",
+                          "height": 1206,
+                          "width": 804
+                        }
+                      }
+                    },
+                    {
+                      "name": {
+                        "__typename": "Name",
+                        "id": "nm8051851",
+                        "nameText": { "text": "Gayathri" },
+                        "primaryImage": {
+                          "__typename": "Image",
+                          "id": "rm3011062016",
+                          "url": "https://m.media-amazon.com/images/M/MV5BNTMxMzBmMjYtOTc5OC00N2UxLWIwZDktMGQwYWRkOTJiYWQ3XkEyXkFqcGc@._V1_.jpg",
+                          "height": 1206,
+                          "width": 804
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

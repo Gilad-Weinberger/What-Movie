@@ -48,16 +48,19 @@
       <div class="search">
         <h1 class="title">Discover Your Next Favorite Movie</h1>
         <div class="search-bar">
-          <input
-            type="search"
-            name=""
-            class="search-input"
-            id=""
-            placeholder="Search Your Favorite Movie..."
-          />
-          <button type="submit">
-            <i class="fa-regular fa-magnifying-glass"></i>
-          </button>
+          <form method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
+            <input
+              type="search"
+              name="movie_name_search"
+              class="search-input"
+              id="movie_name_search"
+              placeholder="Search Your Favorite Movie..."
+            />
+            <button type="submit">
+              <i class="fa-regular fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
       </div>
       <div class="movie-gallery">

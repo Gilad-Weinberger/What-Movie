@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
 import json
+from django.urls import reverse
 
 main_url = "https://imdb8.p.rapidapi.com/v2/search"
 details_url = "https://imdb8.p.rapidapi.com/title/get-overview-details"
@@ -20,13 +21,10 @@ headers = {
 	"x-rapidapi-host": "imdb8.p.rapidapi.com"
 }
 
-main_querystring = {"Joker":"","type":"TITLE","first":"5"}
-main_response = requests.get(main_url, headers=headers, params=main_querystring) 
-
 def Home(request):
     popular_movies = []
 
-    popular_querystring = {"first":"40","country":"US","language":"en-US"}
+    popular_querystring = {"first":"27","country":"US","language":"en-US"}
     popular_response = requests.get(popular_url, headers=headers, params=popular_querystring) 
    
     if popular_response.status_code == 200:
@@ -41,18 +39,25 @@ def Home(request):
             }
             popular_movies.append(movie_dict)
     
+    if request.method == 'POST':
+        movie_name_search = request.POST.get('movie_name_search', '').strip()
+        print(movie_name_search)
+        if movie_name_search:
+            return redirect(reverse('movie', args=[movie_name_search]))
+
     context = {
         'movies': popular_movies
     }
 
     return render(request, 'base/home.html', context)
 
-def Movie(request):
+def Movie(request, movie_name):
+    main_querystring = {"searchTerm": movie_name,"type":"title","first":"1"}
+    main_response = requests.get(main_url, headers=headers, params=main_querystring) 
+
     if main_response.status_code == 200:
         main_data = main_response.json()
         movie_id = main_data["data"]["mainSearch"]["edges"][0]["node"]["entity"]["id"]
-    else:
-        movie_id = "tt0241527"  
     
     details_querystring = {"tconst": movie_id}
     
