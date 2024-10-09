@@ -8,6 +8,7 @@ details_url = "https://imdb8.p.rapidapi.com/title/get-overview-details"
 genres_url = "https://imdb8.p.rapidapi.com/title/v2/get-genres"
 cast_url = "https://imdb8.p.rapidapi.com/title/v2/get-top-cast-and-crew"
 popular_url = "https://imdb8.p.rapidapi.com/title/v2/get-popular"
+videos_url = "https://imdb8.p.rapidapi.com/title/get-videos"
 
 # 21 headers:
 # headers = {
@@ -64,6 +65,7 @@ def Movie(request, movie_name):
     details_response = requests.get(details_url, headers=headers, params=details_querystring)
     genres_response = requests.get(genres_url, headers=headers, params=details_querystring)
     cast_response = requests.get(cast_url, headers=headers, params=details_querystring)
+    videos_response = requests.get(videos_url, headers=headers, params=details_querystring)
 
     movie = {}
     
@@ -106,6 +108,12 @@ def Movie(request, movie_name):
                 }
                 top_characters.append(character)
         movie["top_characters"] = top_characters
+
+    if videos_response.status_code == 200:
+        data = videos_response.json()
+        image = data["resource"]["videos"][0]["image"]
+        if image["width"] > 1900:
+            movie["image"] = image["url"]
 
     context = {
         "movie": movie
