@@ -8,12 +8,19 @@ genres_url = "https://imdb8.p.rapidapi.com/title/v2/get-genres"
 cast_url = "https://imdb8.p.rapidapi.com/title/v2/get-top-cast-and-crew"
 popular_url = "https://imdb8.p.rapidapi.com/title/v2/get-popular"
 
+# 21 headers:
+# headers = {
+#     "x-rapidapi-key": "9ddb0ab3fdmshd38e2a337759cc3p1af9b8jsnde847bad7fa1",
+#     "x-rapidapi-host": "imdb8.p.rapidapi.com"
+# }
+
+# 321 headers:
 headers = {
-    "x-rapidapi-key": "9ddb0ab3fdmshd38e2a337759cc3p1af9b8jsnde847bad7fa1",
-    "x-rapidapi-host": "imdb8.p.rapidapi.com"
+	"x-rapidapi-key": "51cc4ca6d6msh5996fc999faf8b9p173fe6jsn1f15abc92647",
+	"x-rapidapi-host": "imdb8.p.rapidapi.com"
 }
 
-main_querystring = {"Harry Potter":"","type":"TITLE","first":"5"}
+main_querystring = {"Joker":"","type":"TITLE","first":"5"}
 main_response = requests.get(main_url, headers=headers, params=main_querystring) 
 
 def Home(request):
