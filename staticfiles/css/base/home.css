@@ -4,8 +4,9 @@ body {
   padding: 0px;
   font-family: "Poppins";
   background-color: black;
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 body .navbar {
   width: calc(100vw - 68px);
@@ -16,7 +17,6 @@ body .home {
 }
 body .home .search {
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.15);
   padding: 20px;
   position: absolute;
   z-index: 100;
@@ -31,6 +31,7 @@ body .home .search .title {
   color: white;
   font-size: 38px;
   margin: 0px 0px 5px 0px;
+  text-align: center;
 }
 body .home .search .search-bar .search-input {
   height: 10px;
@@ -71,4 +72,38 @@ body .home .movie-gallery .movie-card .movie-image {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+  body .home .search .title {
+    font-size: 24px;
+  }
+  body .home .search .search-bar form .search-input {
+    width: 75vw;
+  }
+  body .home .movie-gallery .movie-card {
+    height: calc((100vh - 66px) / 3);
+  }
+  body .home .movie-gallery .movie-card:nth-child(n+10) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 520px) {
+  body .home .search .title {
+    font-size: 20px;
+  }
+  body .home .movie-gallery .movie-card:nth-child(n+7) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 370px) {
+  body .home .search .title {
+    width: 60vw;
+  }
+  body .home .movie-gallery .movie-card {
+    height: calc((100vh - 60px) / 2);
+  }
+  body .home .movie-gallery .movie-card:nth-child(n+3) {
+    display: none;
+  }
 }/*# sourceMappingURL=home.css.map */

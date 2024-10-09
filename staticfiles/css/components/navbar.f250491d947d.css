@@ -96,11 +96,4 @@
   font-size: 16px; /* Increase the font size for the name text */
   margin: 0px;
   font-weight: 500;
-}
-
-@media only screen and (max-width: 930px) {
-  .navbar .left .categories,
-  .navbar .left p {
-    display: none;
-  }
-}/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.f250491d947d.css.map */

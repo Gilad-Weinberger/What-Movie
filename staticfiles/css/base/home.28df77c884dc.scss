@@ -32,7 +32,6 @@ body {
         color: white;
         font-size: 38px;
         margin: 0px 0px 5px 0px;
-        text-align: center;
       }
       .search-bar {
         .search-input {
@@ -78,66 +77,10 @@ body {
     }
   }
 }
-@media only screen and (max-width: 700px) {
-  body {
-    .home {
-      .search {
-        .title {
-          font-size: 24px;
-        }
-        .search-bar {
-          form {
-            .search-input {
-              width: 75vw;
-            }
-          }
-        }
-      }
-      .movie-gallery {
-        .movie-card {
-          height: calc((100vh - 66px) / 3);
-          &:nth-child(n + 10) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 520px) {
-  body {
-    .home {
-      .search {
-        .title {
-          font-size: 20px;
-        }
-      }
-      .movie-gallery {
-        .movie-card {
-          &:nth-child(n + 7) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 370px) {
-  body {
-    .home {
-      .search {
-        .title {
-          width: 60vw;
-        }
-      }
-      .movie-gallery {
-        .movie-card {
-          height: calc((100vh - 60px) / 2);
-          &:nth-child(n + 3) {
-            display: none;
-          }
-        }
-      }
+@media only screen and (max-width: 640px) {
+  .bod {
+    .movie-card:nth-child(n + 15) {
+      display: none;
     }
   }
 }

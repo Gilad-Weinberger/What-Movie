@@ -98,10 +98,9 @@
     }
   }
 }
-@media only screen and (max-width: 930px) {
+@media (max-width: 640px) {
   .navbar {
     .left {
-      .categories,
       p {
         display: none;
       }

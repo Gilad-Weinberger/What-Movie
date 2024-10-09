@@ -31,7 +31,6 @@ body .home .search .title {
   color: white;
   font-size: 38px;
   margin: 0px 0px 5px 0px;
-  text-align: center;
 }
 body .home .search .search-bar .search-input {
   height: 10px;
@@ -74,36 +73,8 @@ body .home .movie-gallery .movie-card .movie-image {
      object-fit: cover;
 }
 
-@media only screen and (max-width: 700px) {
-  body .home .search .title {
-    font-size: 24px;
-  }
-  body .home .search .search-bar form .search-input {
-    width: 75vw;
-  }
-  body .home .movie-gallery .movie-card {
-    height: calc((100vh - 66px) / 3);
-  }
-  body .home .movie-gallery .movie-card:nth-child(n+10) {
-    display: none;
-  }
-}
-@media only screen and (max-width: 520px) {
-  body .home .search .title {
-    font-size: 20px;
-  }
-  body .home .movie-gallery .movie-card:nth-child(n+7) {
-    display: none;
-  }
-}
-@media only screen and (max-width: 370px) {
-  body .home .search .title {
-    width: 60vw;
-  }
-  body .home .movie-gallery .movie-card {
-    height: calc((100vh - 60px) / 2);
-  }
-  body .home .movie-gallery .movie-card:nth-child(n+3) {
+@media only screen and (max-width: 640px) {
+  .bod .movie-card:nth-child(n+15) {
     display: none;
   }
 }/*# sourceMappingURL=home.css.map */
