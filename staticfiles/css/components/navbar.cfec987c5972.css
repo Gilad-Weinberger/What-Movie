@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Rubik+Spray+Paint&display=swap");
+.navbar {
+  font-family: "Poppins";
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.0000001));
+  color: white;
+  height: 50px; /* Increase the height to accommodate bigger elements */
+  left: 0px;
+  top: 0px;
+  padding: 16px 30px 0px 38px;
+  position: absolute;
+  width: calc(100vw - 84px);
+  z-index: 12;
+}
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+.navbar .left .logo-link {
+  display: flex;
+  align-items: center;
+}
+.navbar .left .logo-link .logo {
+  height: 35px; /* Increase the logo height to match the navbar height */
+  margin-right: 15px;
+}
+.navbar .left p {
+  font-size: 16px; /* Increase the font size for the left section */
+  margin-left: 15px;
+}
+.navbar .left .categories {
+  display: flex;
+  align-items: center;
+  margin: 0px 15px;
+  font-size: 14px; /* Increase the font size for categories */
+}
+.navbar .left .categories i {
+  font-size: 20px; /* Increase the font size for the icon */
+  margin-right: 4px;
+}
+.navbar .right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar .right .bell {
+  display: flex;
+}
+.navbar .right .bell .bell-box {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(51, 50, 50, 0.85);
+  border-radius: 50%;
+}
+.navbar .right .bell .bell-box i {
+  font-size: 20px; /* Increase the font size for the bell icon */
+}
+.navbar .right .bell .bell-count-box {
+  background-color: rgb(200, 158, 22);
+  height: 25px; /* Increase the height to match the bell count box size */
+  width: 25px; /* Increase the width to match the bell count box size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: -12.5px; /* Adjust the margin to center the bell count box */
+}
+.navbar .right .bell .bell-count-box .bell-count {
+  font-size: 14px; /* Increase the font size for the bell count */
+}
+.navbar .right .profile {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.navbar .right .profile .image {
+  height: 50px; /* Increase the image height to match the navbar height */
+  width: 50px; /* Increase the image width to match the navbar height */
+  border-radius: 50%;
+}
+.navbar .right .profile .text {
+  margin-left: 10px;
+}
+.navbar .right .profile .text .welcome {
+  font-size: 14px; /* Increase the font size for the welcome text */
+  margin: 0px;
+  color: #dfdfdf;
+}
+.navbar .right .profile .text .name {
+  font-size: 16px; /* Increase the font size for the name text */
+  margin: 0px;
+  font-weight: 500;
+}/*# sourceMappingURL=navbar.css.map */

@@ -10,6 +10,7 @@ body {
   background-color: black;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.15);
   .navbar {
     width: calc(100vw - 68px);
     background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.01));
@@ -18,7 +19,6 @@ body {
     position: relative;
     .search {
       border-radius: 15px;
-      background-color: rgba(0, 0, 0, 0.15);
       padding: 20px;
       position: absolute;
       z-index: 100;
