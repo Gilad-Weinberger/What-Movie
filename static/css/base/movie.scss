@@ -237,3 +237,17 @@ body {
     color-stop(0.86, rgb(255, 140, 0)) // Darker orange
   );
 }
+@media only screen and (max-width: 640px) {
+  body {
+    .home {
+      .main-screen {
+        .main-movie {
+          .title {
+            line-height: 20px !important;
+            font-size: 20px !important;
+          }
+        }
+      }
+    }
+  }
+}

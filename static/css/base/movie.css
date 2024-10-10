@@ -223,4 +223,11 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(255, 214, 77)), color-stop(0.72, rgb(255, 179, 71)), color-stop(0.86, rgb(255, 140, 0)));
+}
+
+@media only screen and (max-width: 640px) {
+  body .home .main-screen .main-movie .title {
+    line-height: 20px !important;
+    font-size: 20px !important;
+  }
 }/*# sourceMappingURL=movie.css.map */

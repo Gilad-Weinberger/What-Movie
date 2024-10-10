@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 import requests
 import json
 from django.urls import reverse
+from .headers import all_headers
 
 main_url = "https://imdb8.p.rapidapi.com/v2/search"
 details_url = "https://imdb8.p.rapidapi.com/title/get-overview-details"
@@ -10,35 +11,27 @@ cast_url = "https://imdb8.p.rapidapi.com/title/v2/get-top-cast-and-crew"
 popular_url = "https://imdb8.p.rapidapi.com/title/v2/get-popular"
 videos_url = "https://imdb8.p.rapidapi.com/title/get-videos"
 
-# 21 headers:
-# headers = {
-#     "x-rapidapi-key": "9ddb0ab3fdmshd38e2a337759cc3p1af9b8jsnde847bad7fa1",
-#     "x-rapidapi-host": "imdb8.p.rapidapi.com"
-# }
-
-# 321 headers:
-headers = {
-	"x-rapidapi-key": "51cc4ca6d6msh5996fc999faf8b9p173fe6jsn1f15abc92647",
-	"x-rapidapi-host": "imdb8.p.rapidapi.com"
-}
+# for headers look in base/headers.py
 
 def Home(request):
     popular_movies = []
 
     popular_querystring = {"first":"27","country":"US","language":"en-US"}
-    popular_response = requests.get(popular_url, headers=headers, params=popular_querystring) 
-   
-    if popular_response.status_code == 200:
-        data = popular_response.json()
-        movies = data['data']['movies']['edges']
-        for movie in movies[:27]:
-            movie_info = movie['node']
-            movie_dict = {
-                'id': movie_info['id'],
-                'name': movie_info['titleText']['text'],
-                'image': movie_info['primaryImage']['url'] if movie_info['primaryImage'] else None
-            }
-            popular_movies.append(movie_dict)
+    
+    for header in all_headers:
+        popular_response = requests.get(popular_url, headers=header, params=popular_querystring) 
+        if popular_response.status_code == 200:
+            data = popular_response.json()
+            movies = data['data']['movies']['edges']
+            for movie in movies[:27]:
+                movie_info = movie['node']
+                movie_dict = {
+                    'id': movie_info['id'],
+                    'name': movie_info['titleText']['text'],
+                    'image': movie_info['primaryImage']['url'] if movie_info['primaryImage'] else None
+                }
+                popular_movies.append(movie_dict)
+            break
     
     if request.method == 'POST':
         movie_name_search = request.POST.get('movie_name_search', '').strip()
@@ -54,18 +47,25 @@ def Home(request):
 
 def Movie(request, movie_name):
     main_querystring = {"searchTerm": movie_name,"type":"title","first":"1"}
-    main_response = requests.get(main_url, headers=headers, params=main_querystring) 
+    
+    for header in all_headers:
+        main_response = requests.get(main_url, headers=header, params=main_querystring) 
+        if main_response.status_code == 200:
+            now_headers = header
+            break
 
     if main_response.status_code == 200:
         main_data = main_response.json()
         movie_id = main_data["data"]["mainSearch"]["edges"][0]["node"]["entity"]["id"]
-    
+    else:
+        print(main_response.status_code)
+
     details_querystring = {"tconst": movie_id}
     
-    details_response = requests.get(details_url, headers=headers, params=details_querystring)
-    genres_response = requests.get(genres_url, headers=headers, params=details_querystring)
-    cast_response = requests.get(cast_url, headers=headers, params=details_querystring)
-    videos_response = requests.get(videos_url, headers=headers, params=details_querystring)
+    details_response = requests.get(details_url, headers=now_headers, params=details_querystring)
+    genres_response = requests.get(genres_url, headers=now_headers, params=details_querystring)
+    cast_response = requests.get(cast_url, headers=now_headers, params=details_querystring)
+    videos_response = requests.get(videos_url, headers=now_headers, params=details_querystring)
 
     movie = {}
     
