@@ -79,8 +79,10 @@
   align-items: center;
   margin-left: 15px;
 }
-.navbar .right .profile i {
-  font-size: 35px;
+.navbar .right .profile .image {
+  height: 50px; /* Increase the image height to match the navbar height */
+  width: 50px; /* Increase the image width to match the navbar height */
+  border-radius: 50%;
 }
 .navbar .right .profile .text {
   margin-left: 10px;
@@ -101,4 +103,4 @@
   .navbar .left p {
     display: none;
   }
-}/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.80699930ceba.css.map */

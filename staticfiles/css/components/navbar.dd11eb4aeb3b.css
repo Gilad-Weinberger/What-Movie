@@ -79,8 +79,10 @@
   align-items: center;
   margin-left: 15px;
 }
-.navbar .right .profile i {
-  font-size: 35px;
+.navbar .right .profile .image {
+  height: 50px; /* Increase the image height to match the navbar height */
+  width: 50px; /* Increase the image width to match the navbar height */
+  border-radius: 50%;
 }
 .navbar .right .profile .text {
   margin-left: 10px;
@@ -96,9 +98,8 @@
   font-weight: 500;
 }
 
-@media only screen and (max-width: 930px) {
-  .navbar .left .categories,
+@media (max-width: 640px) {
   .navbar .left p {
     display: none;
   }
-}/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.dd11eb4aeb3b.css.map */

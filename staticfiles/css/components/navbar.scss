@@ -77,10 +77,8 @@
       display: flex;
       align-items: center;
       margin-left: 15px;
-      .image {
-        height: 50px; /* Increase the image height to match the navbar height */
-        width: 50px; /* Increase the image width to match the navbar height */
-        border-radius: 50%;
+      i {
+        font-size: 35px;
       }
       .text {
         margin-left: 10px;
